@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    font-family: 'Karla',
+        sans-serif;
+    background-color: hsl(204, 43%, 93%);
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+
+.container {
+
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.6fr 1.9fr;
+    grid-template-areas: "part1  part1"
+        "part2  part3";
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+        0 6px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dollar {
+    font-size: 28px;
+}
+
+.month {
+    font-size: 14px;
+    font-weight: lighter;
+    opacity: .5;
+    margin: 0 0 0 10px;
+}
+
+.part {
+    padding: 30px 30px 0;
+
+
+}
+
+.part1 {
+    grid-area: part1;
+
+
+
+    h1 {
+        color: hsl(179, 62%, 43%);
+        font-size: 28px;
+        margin-bottom: 20px;
+
+    }
+
+    h2 {
+        color: hsl(71, 73%, 54%);
+        font-size: 18px;
+        margin-bottom: 15px;
+
+    }
+
+    p {
+        color: hsl(218, 22%, 67%);
+        width: 90%;
+        line-height: 150%;
+    }
+}
+
+.part2 {
+    grid-area: part2;
+    background: hsl(179, 62%, 43%);
+    color: white;
+    border-bottom-left-radius: 10px;
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: lighter;
+        opacity: .8;
+        margin: 13px 0 30px 0;
+    }
+
+    button {
+        padding: 10px 76px;
+        background-color: hsl(71, 73%, 54%);
+        border-radius: 4px;
+        border: none;
+        font-size: 16px;
+        opacity: .93;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+            0 6px 8px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+
+
+    }
+}
+
+.part3 {
+    grid-area: part3;
+    background: hsl(179, 57%, 52%);
+    color: white;
+    border-bottom-right-radius: 10px;
+
+    h5 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 13px;
+        opacity: .8;
+        font-weight: lighter;
+        margin-top: 20px;
+        line-height: 140%;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 80%;
+    }
+
+    .container {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "part1 "
+            "part2  "
+            "part3";
+    }
+
+    .part1 {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    .part2 {
+        border-radius: 0px;
+    }
+
+    .part3 {
+        border-bottom-left-radius: 10px;
+    }
+}
